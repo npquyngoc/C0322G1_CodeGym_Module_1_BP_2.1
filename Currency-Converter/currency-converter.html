@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency Converter</title>
+</head>
+<body>
+    <h3>Currency Converter</h3>
+    <hr style="width:15%;text-align:left;margin-left:0">
+    <a>Amount: </a><input id="amount_id" type="text"><br><br>
+    <a>From</a>
+    <select id="from_id">
+      <option value="vnd_id">VND</option>
+      <option value="usd_id">USD</option>
+    </select>
+    <a>To</a>
+    <select id="to_id">
+      <option value="usd_id">USD</option>
+      <option value="vnd_id">VND</option>
+    </select>
+    <hr style="width:15%;text-align:left;margin-left:0">
+    <a>Result: </a><a id="result_id"></a>
+    <hr style="width:15%;text-align:left;margin-left:0">
+    <button id="converter_id" type="button" onclick="Convert()">Convert</button>
+</body>
+<script>
+    function Convert() {
+        amount = document.getElementById("amount_id").value;
+        from = document.getElementById("from_id").value;
+        to = document.getElementById("to_id").value;
+        document.getElementById("result_id").value;
+        if (from == "vnd_id" && to == "usd_id") {
+          amount = (amount / 23000).toFixed(2);
+          document.getElementById("result_id").innerHTML = amount + " USD";
+        }
+        if (from == "usd_id" && to == "vnd_id") {
+          amount = (amount * 23000).toFixed(2);
+          document.getElementById("result_id").innerHTML = amount + " VND";
+        }
+        if (from == "vnd_id" && to == "vnd_id") {
+          document.getElementById("result_id").innerHTML = amount + " VND";
+        }
+        if (from == "usd_id" && to == "usd_id") {
+          document.getElementById("result_id").innerHTML = amount + " USD";
+        }
+    }
+</script>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h3>Calculator</h3>
+    <hr style="width:15%;text-align:left;margin-left:0">
+    <a>A: </a><input type="text" id="A"><br><a>B: </a><input type="text" id="B"><br>
+    <hr style="width:15%;text-align:left;margin-left:0">
+    <a>Result: </a><a id="result_id"></a>
+    <hr style="width:15%;text-align:left;margin-left:0">
+    <button type="button" onclick="Cong_()">+</button><button type="button" onclick="Tru_()">-</button><button type="button" onclick="Nhan_()">*</button><button type="button" onclick="Chia_()">/</button>
+</body>
+<script>
+    function Cong(a, b) {
+        return (a + b);
+    }
+    function Tru(a, b) {
+        return (a - b);
+    }
+    function Nhan(a, b) {
+        return (a * b);
+    }
+    function Chia(a, b) {
+        return (a / b);
+    }
+    function Cong_() {
+        a = document.getElementById("A").value;
+        b = document.getElementById("B").value;
+        _Cong = Cong(parseInt(a), parseInt(b).toFixed(2));
+        document.getElementById("result_id").innerHTML = _Cong;
+    }
+    function Tru_() {
+        a = document.getElementById("A").value;
+        b = document.getElementById("B").value;
+        _Tru = Tru(parseInt(a), parseInt(b).toFixed(2));
+        document.getElementById("result_id").innerHTML = _Tru;
+    }
+    function Nhan_() {
+        a = document.getElementById("A").value;
+        b = document.getElementById("B").value;
+        _Nhan = Nhan(parseInt(a), parseInt(b).toFixed(2));
+        document.getElementById("result_id").innerHTML = _Nhan;
+    }
+    function Chia_() {
+        a = document.getElementById("A").value;
+        b = document.getElementById("B").value;
+        _Chia = Chia(parseInt(a), parseInt(b).toFixed(2));
+        document.getElementById("result_id").innerHTML = _Chia;
+    }
+</script>
+</html>

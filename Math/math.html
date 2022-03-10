@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math</title>
+</head>
+<script>
+    Physics = prompt("Hãy nhập điểm môn Vật Lý");
+    Chemistry = prompt("Hãy nhập điểm môn Hoá Học");
+    Biology = prompt("Hãy nhập điểm môn Sinh Học");
+    _Physics = parseFloat(Physics);
+    _Chemistry = parseFloat(Chemistry);
+    _Biology = parseFloat(Biology);
+    alert("Tổng điểm: "+ (_Physics + _Chemistry + _Biology).toFixed(2) + "đ" + "\nĐiểm trung bình: " + ((_Physics + _Chemistry + _Biology) / 3).toFixed(2) + "đ" + "\n\nĐã nhập: Vật Lý (" + _Physics.toFixed(2) + "đ) - Hoá Học (" + _Chemistry.toFixed(2) + "đ) - " + "Sinh Học (" + _Biology.toFixed(2) + "đ)");
+    Celsius = prompt("Hãy nhập °C (Celsius) để chuyển đổi qua °F (Fahrenheit)");
+    _Celsius = parseFloat(Celsius);
+    alert("Nhiệt độ: " + _Celsius.toFixed(2) + "°C bằng " + ((9 * _Celsius / 5) + 32).toFixed(2) + "°F");
+    Radius = prompt("Hãy nhập bán kính hình tròn\n\nĐơn vị: Centimet (cm)");
+    _Radius = parseFloat(Radius);
+    alert("Chu vi hình tròn: " + (3.14 * _Radius * 2).toFixed(2) + " cm" + "\nDiện tích hình tròn: " + (3.14 * (Math.pow(_Radius,2))).toFixed(2) + " cm" + "\n\nĐã nhập: Bán kính (" + _Radius.toFixed(2) + " cm)\n");
+</script>
+</html>
