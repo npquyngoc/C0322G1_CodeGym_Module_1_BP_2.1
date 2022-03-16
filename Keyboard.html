@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Event</title>
+</head>
+<body onload="Do_Ready()">
+    <img id="_Nobita" src="Nobita.jpg" style="position:absolute; width:300px; height:500px; left:0; top:0">
+</body>
+</html>
+<script>
+    function Up_Press() {
+        Img = document.getElementById("_Nobita")
+        Img.style.top = parseInt(Img.style.top) - 5 + "px"
+    }
+    function Down_Press() {
+        Img = document.getElementById("_Nobita")
+        Img.style.top = parseInt(Img.style.top) + 5 + "px"
+    }
+    function Left_Press() {
+        Img = document.getElementById("_Nobita")
+        Img.style.left = parseInt(Img.style.left) - 5 + "px"
+    }
+    function Right_Press() {
+        Img = document.getElementById("_Nobita")
+        Img.style.left = parseInt(Img.style.left) + 5 + "px"
+    }
+    function Press_Event(key) {
+        switch (key.keyCode) {
+            case 37:
+                Left_Press()
+                break
+            case 39:
+                Right_Press()
+                break
+            case 38:
+                Up_Press()
+                break
+            case 40:
+                Down_Press()
+                break
+        }
+    }
+    function Do_Ready() {
+        addEventListener('keydown', Press_Event)
+    }
+</script>
