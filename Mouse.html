@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+</head>
+<body onload="init()">
+    <img id="_Ball" src="Ball.jpg">
+    <br>
+    <p>Bấm vào nút bên dưới để di chuyển quả bóng</p>
+    <br>
+    <button type="button" onclick="moveLeft()">Phải</button>
+</body>
+</html>
+<script>
+    imgObj = document.getElementById('_Ball')
+    function init() {
+        imgObj = document.getElementById('_Ball');
+        imgObj.style.position = 'relative';
+        imgObj.style.left = '0px';
+    }
+    function moveLeft() {
+        imgObj.style.left = parseInt(imgObj.style.left) + 10 + 'px';
+    }
+</script>
