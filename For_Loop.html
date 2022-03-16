@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+</head>
+<body>
+    <h2>For Loop</h2>
+    <a id="_Number"></a>
+</body>
+</html>
+<script>
+    Print = ""
+    for (i = 0; i < 5; i++) {
+        Print += "<br>Con số là " + i
+    }
+    document.getElementById("_Number").innerHTML = Print
+    Number = parseInt(prompt("Nhập số vào để thực hiện vòng lặp"))
+    Total = 0
+    i = 1
+    for (; i <= Number; i += 1) {
+        _Total = Total + i
+        alert(_Total)
+    }
+</script>
