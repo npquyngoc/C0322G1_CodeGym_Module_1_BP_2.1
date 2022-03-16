@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Body Mass Index</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    Weight = parseInt(prompt("Nhập vào cân nặng\nĐơn vị: Kg"))
+    Height = parseInt(prompt("Nhập vào chiều cao\nĐơn vị: m"))
+    BMI = Weight / (Height ^ 2)
+    if (BMI < 18)
+        document.write("Underweight")
+    else if (BMI < 25.0)
+        document.write("Normal")
+    else if (BMI < 30.0)
+        document.write("Overweight")
+    else
+        document.write("Obese")
+</script>
