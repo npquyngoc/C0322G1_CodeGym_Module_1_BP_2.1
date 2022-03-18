@@ -1,2 +1,2 @@
 # CodeGym-Project
-Ngoc dep trai
+High performance and well optimized code.
