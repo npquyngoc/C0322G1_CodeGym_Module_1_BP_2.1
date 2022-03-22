@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    var Value_Table = "<table border = '1' width = '100%'>";
+    for (i = 1; i < 10; i++) {
+        var Value_Table = Value_Table + "<tr>";
+        for (j = 2; j < 10; j++) {
+            var Value_Table = Value_Table + "<td>" + j + " x " + i + " = " + (i * j) + "</td>";
+        }
+        var Value_Table = Value_Table + "</tr>";
+    }
+    var Value_Table = Value_Table + "</table>";
+    document.write(Value_Table);
+</script>
