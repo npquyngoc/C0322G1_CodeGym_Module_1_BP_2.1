@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary</title>
+</head>
+<body>
+    Tiếng Anh <input id="EN_Id"></input>
+    <button onclick="Translate()" type="button">Dịch</button>
+    <hr style="width:30%;text-align:left;margin-left:0">
+    <a>Hiện tại chỉ có: hello, goodbye, thank, sorry</a>
+    <hr style="width:30%;text-align:left;margin-left:0">
+</body>
+</html>
+<script>
+    function Translate() {
+        let EN = document.getElementById("EN_Id").value;
+        let VI = document.getElementById("VI_Id");
+        let English = ["hello", "goodbye", "thank", "sorry"];
+        let Vietnamese = ["Xin chào", "Tạm biệt", "Cảm ơn", "Xin lỗi"];
+        for (let i = 0; i < English.length; i++) {
+            if (EN == English[i]) {
+                var Compare = 1;
+                var Result = i;
+            }
+        }
+        if (Compare == 1) {
+            alert("Dịch: " + Vietnamese[Result]);
+        } else {
+            alert("Từ này không có trong từ điển.");
+        }
+    }
+</script>
