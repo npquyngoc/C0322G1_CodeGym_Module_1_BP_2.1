@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Display</title>
+</head>
+<body>
+</body>
+<script>
+    let N = 2;
+    let Count = 0;
+    let Result = "";
+    do {
+        var Prime = parseInt(prompt("Nhập vào số nguyên tố"));
+    } while (Prime < 1 || Prime > 20);
+    while (1) {
+        let Compare = 1;
+        let i;
+        for (i = 2; i < N; i++) {
+            if (N % i == 0) {
+                Compare = 0;
+            }
+        }
+        if (Compare == 1) {
+            Result += "  " + N;
+            Count++;
+        }
+        if (Count >= Prime) {
+            break;
+        }
+        N++;
+    }
+    alert("Số nguyên tố: " + Result);
+</script>
+</html>
