@@ -6,7 +6,7 @@
     <title>Dictionary</title>
 </head>
 <body>
-    Tiếng Anh <input id="EN_Id"></input>
+    Tiếng Anh <input id="ENG_Id"></input>
     <button onclick="Translate()" type="button">Dịch</button>
     <hr style="width:30%;text-align:left;margin-left:0">
     <a>Hiện tại chỉ có: hello, goodbye, thank, sorry</a>
@@ -15,12 +15,11 @@
 </html>
 <script>
     function Translate() {
-        let EN = document.getElementById("EN_Id").value;
-        let VI = document.getElementById("VI_Id");
-        let English = ["hello", "goodbye", "thank", "sorry"];
-        let Vietnamese = ["Xin chào", "Tạm biệt", "Cảm ơn", "Xin lỗi"];
-        for (let i = 0; i < English.length; i++) {
-            if (EN == English[i]) {
+        var ENG = document.getElementById("ENG_Id").value;
+        var English = ["hello", "goodbye", "thank", "sorry"];
+        var Vietnamese = ["Xin chào", "Tạm biệt", "Cảm ơn", "Xin lỗi"];
+        for (var i = 0; i < ENG.length; i++) {
+            if (ENG == English[i]) {
                 var Compare = 1;
                 var Result = i;
             }
@@ -28,7 +27,7 @@
         if (Compare == 1) {
             alert("Dịch: " + Vietnamese[Result]);
         } else {
-            alert("Từ này không có trong từ điển.");
+            alert("Không tìm thấy từ này.");
         }
     }
 </script>
