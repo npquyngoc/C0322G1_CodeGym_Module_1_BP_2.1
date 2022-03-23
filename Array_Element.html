@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Array Element</title>
+</head>
+
+<body>
+    <input id="Value_Id"></input>
+    <button id="Add_Id" onclick="Add_Array()">Add</button>
+    <button id="Display_Id" onclick="Display_Array()">Display</button>
+    <div id="Result_Id"></div>
+</body>
+
+</html>
+
+<script>
+    let x = 0;
+    let array = Array();
+    function Add_Array() {
+        array[x] = document.getElementById("Value_Id").value;
+        alert("Element: " + array[x] + " Added at index " + x);
+        x++;
+        document.getElementById("Value_Id").value = "";
+    }
+    function Display_Array() {
+        let y = "<hr/>";
+        for (let i = 0; i < array.length; i++) {
+            y += "Element " + i + " = " + array[i] + "<br>";
+        }
+        document.getElementById("Result_Id").innerHTML = y;
+    }
+</script>
