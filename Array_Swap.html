@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Swap</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    var String = prompt("Nhập vào một dãy chữ")
+    var UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var LOWER = "abcdefghijklmnopqrstuvwxyz";
+    var Result = [];
+    for (var x = 0; x < String.length; x++) {
+        if (UPPER.indexOf(String[x]) !== -1) {
+            Result.push(String[x].toLowerCase());
+        }
+        else if (LOWER.indexOf(String[x]) !== -1) {
+            Result.push(String[x].toUpperCase());
+        }
+        else {
+            Result.push(String[x]);
+        }
+    }
+    document.write(Result.join(""));
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Insert</title>
+</head>
+<body>
+</body>
+</html>
+<script>
+    var Numbers = parseInt(prompt("Nhập vào một dãy số"));
+    var String = Numbers.toString();
+    var Result = [String[0]];
+    for (var i = 1; i < String.length; i++) {
+        if (String[i - 1] % 2 === 0 && String[i] % 2 === 0) {
+            Result.push("-", String[i]);
+        } else {
+            Result.push(String[i]);
+        }
+    }
+    document.write(Result.join(""));
+</script>
