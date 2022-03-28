@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>Create and Call Functions</title>
+</head>
+</html>
+<script>
+    function processConfirm (answer) {
+        var result = "";
+        if (answer) {
+            result = "Excellent. We'll play a nice game of chess.";
+        } else {
+            result = "Maybe later then.";
+        }
+        return result;
+    }
+    var confirmAnswer = confirm ("Shall we play a game?");
+    var theAnswer = processConfirm (confirmAnswer);
+    alert(theAnswer);
+</script>
