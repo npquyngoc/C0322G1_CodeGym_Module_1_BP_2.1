@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <title>StarsAndConstellations</title>
+</head>
+</html>
+<script>
+    var StarsName = prompt("Nhập vào tên của ngôi sao");
+    function StarsAndConstellations() {
+        var Stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        var Constellations = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        for (var i = 0; i < Stars.length; i++) {
+            if (StarsName == Stars[i]) {
+                var Compare = 1;
+                var Result = i;
+            }
+        }
+        if (Compare == 1) {
+            alert("Ngôi sao " + Stars[Result] + " thuộc chòm sao " + Constellations[Result]);
+        } else {
+            alert("Không tìm thấy từ này.");
+        }
+    }
+    StarsAndConstellations();
+</script>
