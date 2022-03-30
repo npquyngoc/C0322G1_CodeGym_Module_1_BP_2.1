@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<head>
+    <title>Min Array</title>
+</head>
+</html>
+<script>
+    function MinArray(Array) {
+    var Min = Array[0];
+    for(var i = 1; i < Array.length; i++) {
+        if(Array[i] < Min){
+            Min = Array[i];
+        }
+    }
+    return Min;
+    }
+    var Arrays = [-9, 0, 2, 8, 3, 12, -10];
+    var Min = MinArray(Arrays);
+    alert("Giá trị nhỏ nhất trong mảng là: " + Min);
+</script>
