@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <title>Temperature Converter</title>
+</head>
+<body>
+    <h2>Temperature Converter</h2>
+    <a>Fahrenheit</a>
+    <input placeholder="Nhập vào °F" oninput="TemperatureConverter(this.value)">
+    <br><a>Celsius: <a id="Celsius_Id"></a></a>
+</body>
+</html>
+<script>
+    function TemperatureConverter(Fahrenheit) {
+        var Fahrenheit = parseFloat(Fahrenheit);
+        document.getElementById("Celsius_Id").innerHTML = (Fahrenheit - 32 / 1.8).toFixed(2);
+    }
+</script>
