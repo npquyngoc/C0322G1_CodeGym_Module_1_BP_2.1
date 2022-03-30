@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+    <title>Input Check</title>
+</head>
+</html>
+<script>
+    function InputCheck(Numbers) {
+        if(typeof(Numbers) == "number") {
+            return true;
+        }
+        return false;
+    }
+    var Number = 4;
+    alert("Giá trị " + Number + " là kí tự số: " + InputCheck(Number));
+</script>

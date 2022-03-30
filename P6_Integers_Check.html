@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<head>
+    <title>Integers Check</title>
+</head>
+</html>
+<script>
+    function IntegersCheck(Numbers) {
+        if(Math.ceil(Numbers) == Math.floor(Numbers) && Numbers > 0) {
+            return true;
+        } 
+        return false;
+    }
+    var Number = 6;
+    alert("Giá trị " + Number + " là số nguyên dương: " + IntegersCheck(Number));
+</script>

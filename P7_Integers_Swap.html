@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<head>
+    <title>Integers Swap</title>
+</head>
+</html>
+<script>
+    function IntegersSwap(Numbers) {
+        var Temp;
+        for(var i = 0; i < Numbers.length / 2; i++) {
+            Temp = Numbers[i];
+            Numbers[i] = Numbers[Numbers.length - i - 1];
+            Numbers[Numbers.length - i - 1] = Temp;
+        }
+        return Numbers;
+    }
+    var Integers = [3, 2, 1];
+    alert("Đổi chỗ từ " + Integers + " thành " + IntegersSwap(Integers));
+</script>

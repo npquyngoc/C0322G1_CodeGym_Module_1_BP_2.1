@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>Array Appear</title>
+</head>
+</html>
+<script>
+    var Arrays = ["a", "b", "c", "a"];
+    function Search(Array, Number) {
+        var Count = 0;
+        for(var i = 0; i < Array.length; i++) {
+            if(Number == Array[i]) {
+                Count++;
+            }
+        }
+        if(Count == 0) {
+            return -1;
+        } else {
+            return Count;
+        }
+    }
+    var Value = "1";
+    alert("Giá trị " + Value + " xuất hiện " + Search(Arrays, Value) + " lần");
+</script>

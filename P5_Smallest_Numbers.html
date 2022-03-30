@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+    <title>Smallest Numbers</title>
+</head>
+</html>
+<script>
+    function SmallestNumbers(Number_1, Number_2, Number_3) {
+        if (Number_1 <= Number_2) {
+            if (Number_1 <= Number_3) {
+                return Number_1;
+            } else {
+                return Number_3;
+            }
+        } else {
+            if (Number_2 <= Number_3) {
+                return Number_2;
+            } else {
+                return Number_3;
+            }
+        }
+    }
+    alert("Số nhỏ nhất là: " + SmallestNumbers(1, 2, 3));
+</script>
