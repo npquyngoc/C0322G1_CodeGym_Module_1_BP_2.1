@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title>Feet and Meter Converter</title>
+</head>
+<body>
+    <h3 style="margin-left: 100px">Feet and Meter Converter</h3>
+    <hr style="width: 27%; text-align: left; margin-left: 0">
+    <a>Amount </a><input id="Amount_Id" placeholder="Nhập vào giá trị" oninput="Convert(this.value)">
+    <a>From</a>
+    <select id="From_Id">
+        <option value="Feet_Value">Feet</option>
+        <option value="Meter_Value">Meter</option>
+    </select>
+    <a>To</a>
+    <select id="To_Id">
+        <option value="Meter_Value">Meter</option>
+        <option value="Feet_Value">Feet</option>
+    </select>
+    <hr style="width: 27%; text-align: left; margin-left: 0">
+    <a>Result: </a><a id="Result_Id"></a>
+    <hr style="width: 27%; text-align: left; margin-left: 0">
+</body>
+</html>
+<script>
+    function Convert() {
+        var Amount = document.getElementById("Amount_Id").value;
+        var From = document.getElementById("From_Id").value;
+        var To = document.getElementById("To_Id").value;
+        document.getElementById("Result_Id").value;
+        if (From == "Feet_Value" && To == "Meter_Value") {
+            Amount = (Amount * 0.305).toFixed(3);
+            document.getElementById("Result_Id").innerHTML = Amount + " Meter";
+        }
+        if (From == "Meter_Value" && To == "Feet_Value") {
+            Amount = (Amount * 3.279).toFixed(3);
+            document.getElementById("Result_Id").innerHTML = Amount + " Feet";
+        }
+        if (From == "Feet_Value" && To == "Feet_Value") {
+            document.getElementById("Result_Id").innerHTML = Amount + " Feet";
+        }
+        if (From == "Meter_Value" && To == "Meter_Value") {
+            document.getElementById("Result_Id").innerHTML = Amount + " Meter";
+        }
+    }
+</script>
