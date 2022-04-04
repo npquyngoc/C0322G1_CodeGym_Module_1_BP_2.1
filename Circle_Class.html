@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<head>
+    <title>Circle Class</title>
+</head>
+</html>
+<script>
+    var Circle = function(Radius, Color) {
+        this.Radius = Radius;
+        this.Color = Color;
+        this.GetRadius = function() {
+            return this.Radius;
+        }
+        this.GetColor = function() {
+            return this.Color;
+        }
+        this.GetArea = function() {
+            return (Math.PI * Math.pow(this.Radius, 2)).toFixed(2);
+        }
+        this.SetRadius = function(Radius){
+            return this.Radius = Radius.toFixed(2);
+        }
+        this.Display = function(){
+            return `Radius : ${this.Radius}\nColor : ${this.Color}\nArea : ${this.GetArea()}`;
+        }
+    }
+    var _Circle = new Circle(2, "Blue");
+    _Circle.SetRadius(4);
+    alert(_Circle.Display());
+</script>
