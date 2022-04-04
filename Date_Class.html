@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<head>
+    <title>Date Class</title>
+</head>
+</html>
+<script>
+    var myDate = function (date, month, year) {
+        this.date = date;
+        this.month = month;
+        this.year = year;
+        this.getDate = function () {
+            return this.date;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        this.setDay = function (date) {
+            return this.date = date;
+        }
+        this.setMonth = function (month) {
+            return this.month = month;
+        }
+        this.setYear = function (year) {
+            return this.year = year;
+        }
+        this.setDate = function (date, month, year) {
+            return this.date = date,
+                   this.month = month,
+                   this.year = year
+        }
+        this.toString = function () {
+            return `${this.date}/${this.month}/${this.year}`;
+        }
+    }
+    var display = new myDate (2, 2, 2007);
+    var date = display.getDate ();
+    var month = display.getMonth ();
+    var year = display.getYear ();
+    alert(`Ngày ${date} tháng ${month} năm ${year}`);
+    display.setDay (10);
+    display.setMonth (10);
+    display.setYear (2019);
+    display.setDate (3, 3, 1997);
+    alert(`Ngày ${display.getDate ()} tháng ${display.getMonth ()} năm ${display.getYear ()}`);
+    alert(`${display.toString ()}`);
+</script>
