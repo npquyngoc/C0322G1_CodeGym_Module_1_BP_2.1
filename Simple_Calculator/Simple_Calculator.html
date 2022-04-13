@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="Cores/CodeGym_Icon.jpg" />
+    <link rel="stylesheet" href="Cores/Simple_Calculator_Theme.css" />
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+    <table id="calculator_display">
+        <tr>
+            <td>
+                <input id="calculate_result" disabled>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <br>
+                <input type="button" value="1" onclick="displayResult('1')">
+                <input type="button" value="2" onclick="displayResult('2')">
+                <input type="button" value="3" onclick="displayResult('3')">
+                <input type="button" value="+" onclick="displayResult('+')">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" value="4" onclick="displayResult('4')">
+                <input type="button" value="5" onclick="displayResult('5')">
+                <input type="button" value="6" onclick="displayResult('6')">
+                <input type="button" value="-" onclick="displayResult('-')">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" value="7" onclick="displayResult('7')">
+                <input type="button" value="8" onclick="displayResult('8')">
+                <input type="button" value="9" onclick="displayResult('9')">
+                <input type="button" value="x" onclick="displayResult('*')">
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <input type="button" value="C" onclick="clearScreen()">
+                <input type="button" value="0" onclick="displayResult('0')">
+                <input type="button" value="=" onclick="calculate()">
+                <input type="button" value="/" onclick="displayResult('/')">
+            </td>
+        </tr>
+    </table>
+
+    <script src="Cores/Simple_Calculator_Function.js"></script>
+</body>
+</html>
