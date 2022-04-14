@@ -3,7 +3,7 @@ function getImagesOnLoad() {
     getImagesOnClick_2();
     getImagesOnClick_3();
     getImagesOnClick_4();
-    getImagesOnClick_5()
+    getImagesOnClick_5();
 }
 
 function getImagesOnClick_1() {
