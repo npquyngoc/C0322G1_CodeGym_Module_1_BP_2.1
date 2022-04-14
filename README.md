@@ -1,2 +1,4 @@
 # CodeGym-Project
-High performance and well optimized code.
+High performance, lightweight and well optimized code
+
+Languages: HTML, JavaScript, CSS, Java (Comming soon...)
