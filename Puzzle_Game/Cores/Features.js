@@ -16,15 +16,16 @@ const connectImages_1 = "1x1.jpg1x2.jpg1x3.jpg1x4.jpg1x5.jpg";
 const connectImages_2 = "2x1.jpg2x2.jpg2x3.jpg2x4.jpg2x5.jpg";
 const connectImages_3 = "3x1.jpg3x2.jpg3x3.jpg3x4.jpg3x5.jpg";
 
-const gameFinished = "You won the game.";
-
 function getImagesOnClick_1() {
     getImage_1.src = `Cores/Images/${Math.floor(Math.random() * (3)) + 1}x1.jpg`;
 
     compareImages = getImage_1.src.split("/").pop() + getImage_2.src.split("/").pop() + getImage_3.src.split("/").pop() + getImage_4.src.split("/").pop() + getImage_5.src.split("/").pop();
 
     if (compareImages == connectImages_1 || compareImages == connectImages_2 || compareImages == connectImages_3) {
-        alert(gameFinished);
+        gameFinished();
+    }
+    else {
+        gameUnfinished();
     }
 }
 
@@ -34,7 +35,10 @@ function getImagesOnClick_2() {
     compareImages = getImage_1.src.split("/").pop() + getImage_2.src.split("/").pop() + getImage_3.src.split("/").pop() + getImage_4.src.split("/").pop() + getImage_5.src.split("/").pop();
 
     if (compareImages == connectImages_1 || compareImages == connectImages_2 || compareImages == connectImages_3) {
-        alert(gameFinished);
+        gameFinished();
+    }
+    else {
+        gameUnfinished();
     }
 }
 
@@ -44,7 +48,10 @@ function getImagesOnClick_3() {
     compareImages = getImage_1.src.split("/").pop() + getImage_2.src.split("/").pop() + getImage_3.src.split("/").pop() + getImage_4.src.split("/").pop() + getImage_5.src.split("/").pop();
 
     if (compareImages == connectImages_1 || compareImages == connectImages_2 || compareImages == connectImages_3) {
-        alert(gameFinished);
+        gameFinished();
+    }
+    else {
+        gameUnfinished();
     }
 }
 
@@ -54,7 +61,10 @@ function getImagesOnClick_4() {
     compareImages = getImage_1.src.split("/").pop() + getImage_2.src.split("/").pop() + getImage_3.src.split("/").pop() + getImage_4.src.split("/").pop() + getImage_5.src.split("/").pop();
 
     if (compareImages == connectImages_1 || compareImages == connectImages_2 || compareImages == connectImages_3) {
-        alert(gameFinished);
+        gameFinished();
+    }
+    else {
+        gameUnfinished();
     }
 }
 
@@ -64,6 +74,27 @@ function getImagesOnClick_5() {
     compareImages = getImage_1.src.split("/").pop() + getImage_2.src.split("/").pop() + getImage_3.src.split("/").pop() + getImage_4.src.split("/").pop() + getImage_5.src.split("/").pop();
 
     if (compareImages == connectImages_1 || compareImages == connectImages_2 || compareImages == connectImages_3) {
-        alert(gameFinished);
+        gameFinished();
     }
+    else {
+        gameUnfinished();
+    }
+}
+
+function gameFinished() {
+    alert("You won the game.");
+
+    getImage_1.style.boxShadow = "4px 4px 4px blue";
+    getImage_2.style.boxShadow = "4px 4px 4px blue";
+    getImage_3.style.boxShadow = "4px 4px 4px blue";
+    getImage_4.style.boxShadow = "4px 4px 4px blue";
+    getImage_5.style.boxShadow = "4px 4px 4px blue";
+}
+
+function gameUnfinished() {
+    getImage_1.style.boxShadow = "4px 4px 4px black";
+    getImage_2.style.boxShadow = "4px 4px 4px black";
+    getImage_3.style.boxShadow = "4px 4px 4px black";
+    getImage_4.style.boxShadow = "4px 4px 4px black";
+    getImage_5.style.boxShadow = "4px 4px 4px black";
 }
