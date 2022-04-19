@@ -28,7 +28,6 @@ function getImagesOnClick_4() {
 
 function getImagesOnClick_5() {
     const getImage_5 = document.getElementById("Image_5");
-
     getImage_5.src = `Cores/Images/${Math.floor(Math.random() * (3)) + 1}x5.jpg`;
 }
 
