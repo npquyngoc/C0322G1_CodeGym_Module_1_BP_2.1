@@ -1,11 +1,10 @@
 img {
-    padding: 4px;
+    display: block;
 
     width: 600px;
     height: 110px;
-
     margin: 1em auto;
-    display: block;
+    padding: 4px;
 
     box-shadow: 4px 4px 4px black;
 }
