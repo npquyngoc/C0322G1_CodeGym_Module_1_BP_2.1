@@ -1,11 +1,3 @@
-function getImagesOnLoad() {
-    getImagesOnClick_1();
-    getImagesOnClick_2();
-    getImagesOnClick_3();
-    getImagesOnClick_4();
-    getImagesOnClick_5();
-}
-
 function getImagesOnClick_1() {
     const getImage_1 = document.getElementById("Image_1");
     getImage_1.src = `Cores/Images/${Math.floor(Math.random() * (3)) + 1}x1.jpg`;
@@ -29,6 +21,14 @@ function getImagesOnClick_4() {
 function getImagesOnClick_5() {
     const getImage_5 = document.getElementById("Image_5");
     getImage_5.src = `Cores/Images/${Math.floor(Math.random() * (3)) + 1}x5.jpg`;
+}
+
+function getImagesOnLoad() {
+    getImagesOnClick_1();
+    getImagesOnClick_2();
+    getImagesOnClick_3();
+    getImagesOnClick_4();
+    getImagesOnClick_5();
 }
 
 getImagesOnLoad();
