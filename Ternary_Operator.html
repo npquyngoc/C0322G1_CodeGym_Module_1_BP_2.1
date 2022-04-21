@@ -1,17 +1,22 @@
 <!DOCTYPE html>
+
 <head>
     <title>Ternary Operator</title>
 </head>
+
 <body>
+    <script>
+        const valueA = prompt("Nhập vào giá trị A");
+        const valueB = prompt("Nhập vào giá trị B");
+ 
+        const result = (valueA + valueB < 4) ? "Below" : "Over";
+
+        if ((valueA + valueB) < 4) {
+            result = "Below";
+        }
+        else {
+            result = "Over";
+        }
+    </script>
 </body>
 </html>
-<script>
-    A = prompt("Nhập vào giá trị A")
-    B = prompt("Nhập vào giá trị B")
-    result = (A + B < 4) ? "Below" : "Over";
-    if ((A + B) < 4) {
-        result = "Below";
-    } else {
-        result = "Over";
-    }
-</script>
