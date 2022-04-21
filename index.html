@@ -5,43 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Faking Text Area</title>
+    <title>Fake Text</title>
 
     <style>
-        div {
-            margin: 0px auto;
+        * {
             text-align: center;
         }
     </style>
 </head>
 
 <body>
-    <div>
-        <h3>HÃY NHẬP VÀO</h3>
-        <textarea class="result" cols="30" rows="10" oninput="typingResult()"></textarea>
-    </div>
+    <h2>FAKE TEXT</h2>
+
+    <form>
+        <textarea cols="40" rows="1" oninput="wordsReplace()" placeholder="Nhập vào những chữ cái bất kỳ"></textarea>
+    </form>
 
     <script>
         let count = 0;
-        let arrayValue = ["N", "G", "Ọ", "C", " ", "Đ", "Ẹ", "P", " ", "T", "R", "A", "I", " ", "S", "I", "Ê", "U", " ", "C", "Ấ", "P", " ", "V", "Ũ", " ", "T", "R", "Ụ"];
 
-        function typingResult () {
+        function wordsReplace() {
+            let wordsArray = ["N", "G", "Ọ", "C", " ", "Đ", "Ẹ", "P", " ", "T", "R", "A", "I", " ", "S", "I", "Ê", "U", " ", "C", "Ấ", "P", " ", "V", "Ũ", " ", "T", "R", "Ụ"];
             let result = "";
-            let textValue = document.querySelector(".result");
-            textValue.value = "";
 
-            if (count <= arrayValue.length) {         
+            let getInput = document.querySelector("textarea");
+            getInput.value = "";
+
+            if (count <= wordsArray.length) {
                 for (let i = 0; i < count; i++) {
-                    result = result + arrayValue[i];
+                    result = result + wordsArray[i];
                 }
-                textValue.value = result;
+                getInput.value = result;
                 count++
             }
             else {
-                textValue.value = "";
+                getInput.value = "";
                 count = 0;
             }
         }
     </script>
 </body>
+
 </html>
