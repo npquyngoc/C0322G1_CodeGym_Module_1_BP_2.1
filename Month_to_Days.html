@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Month to Days</title>
 </head>
+
 <body>
-    <input type="text" placeholder="Nhập tháng vào đây..." id="Month_"></input>
+    <input type="text" placeholder="Nhập tháng vào đây" id="Month_">
     <button type="button" onclick="Month_to_Days()">Tính số ngày</button>
-    <br><a id="Result_"></a>
-</body>
-</html>
-<script>
+    <br><p id="Result_"></p>
+    
+    <script>
     function Month_to_Days() {
-        Month = document.getElementById("Month_").value
-        switch(Month) {
+        const Month = document.getElementById("Month_").value;
+        switch (Month) {
             case "1":
             case "3":
             case "5":
@@ -22,19 +24,21 @@
             case "8":
             case "10":
             case "12":
-                document.getElementById("Result_").innerHTML = "Tháng " + Month + " có 31 ngày."
-                break
+                document.getElementById("Result_").innerHTML = "Tháng " + Month + " có 31 ngày.";
+                break;
             case "2":
-                document.getElementById("Result_").innerHTML = "Tháng " + Month + " có 28 hoặc 29 ngày."
-                break
+                document.getElementById("Result_").innerHTML = "Tháng " + Month + " có 28 hoặc 29 ngày.";
+                break;
             case "4":
             case "6":
             case "9":
             case "11":
-                document.getElementById("Result_").innerHTML = "Tháng " + Month + " có 30 ngày."
-                break
+                document.getElementById("Result_").innerHTML = "Tháng " + Month + " có 30 ngày.";
+                break;
             default:
-                document.getElementById("Result_").innerHTML = "Không hợp lệ, nhập từ 1-12."
+                document.getElementById("Result_").innerHTML = "Không hợp lệ, nhập từ 1-12.";
         }
     }
-</script>
+    </script>
+</body>
+</html>
