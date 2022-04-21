@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fake Text</title>
+
+    <style>
+        * {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>FAKE TEXT</h2>
+
+    <form>
+        <textarea cols="40" rows="1" oninput="wordsReplace()" placeholder="Nhập vào những chữ cái bất kỳ"></textarea>
+    </form>
+
+    <script>
+        let count = 0;
+
+        function wordsReplace() {
+            let wordsArray = ["N", "G", "Ọ", "C", " ", "Đ", "Ẹ", "P", " ", "T", "R", "A", "I", " ", "S", "I", "Ê", "U", " ", "C", "Ấ", "P", " ", "V", "Ũ", " ", "T", "R", "Ụ"];
+            let result = "";
+
+            let getInput = document.querySelector("textarea");
+            getInput.value = "";
+
+            if (count <= wordsArray.length) {
+                for (let i = 0; i < count; i++) {
+                    result = result + wordsArray[i];
+                }
+                getInput.value = result;
+                count++
+            }
+            else {
+                getInput.value = "";
+                count = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
