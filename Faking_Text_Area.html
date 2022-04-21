@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Faking Text Area</title>
+
+    <style>
+        div {
+            margin: 0px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h3>HÃY NHẬP VÀO</h3>
+        <textarea class="result" cols="30" rows="10" oninput="typingResult()"></textarea>
+    </div>
+
+    <script>
+        let count = 0;
+        let arrayValue = ["N", "G", "Ọ", "C", " ", "Đ", "Ẹ", "P", " ", "T", "R", "A", "I", " ", "S", "I", "Ê", "U", " ", "C", "Ấ", "P", " ", "V", "Ũ", " ", "T", "R", "Ụ"];
+
+        function typingResult () {
+            let result = "";
+            let textValue = document.querySelector(".result");
+            textValue.value = "";
+
+            if (count <= arrayValue.length) {         
+                for (let i = 0; i < count; i++) {
+                    result = result + arrayValue[i];
+                }
+                textValue.value = result;
+                count++
+            }
+            else {
+                textValue.value = "";
+                count = 0;
+            }
+        }
+    </script>
+</body>
+</html>
