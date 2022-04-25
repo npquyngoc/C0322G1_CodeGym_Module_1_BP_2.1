@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Symmetric Check</title>
+</head>
+
+<body>
+    <script>
+        const inputValue = prompt("Nhập vào chuỗi cần kiểm tra");
+
+        function isSymmetric(string) {
+            const array = string.split("");
+            const arrayValue = string.split("");
+
+            for (let i = 0; i < arrayValue.length / 2; i++) {
+                const temp = arrayValue[i];
+
+                arrayValue[i] = arrayValue[arrayValue.length - i - 1];
+                arrayValue[arrayValue.length - i - 1] = temp;
+            }
+
+            for (let i = 0; i < arrayValue.length; i++) {
+                if (array[i] != arrayValue[i]) {
+                    return false;
+                }
+            }
+            return true;
+        }
+        alert(isSymmetric(inputValue));
+    </script>
+</body>
+
+</html>
