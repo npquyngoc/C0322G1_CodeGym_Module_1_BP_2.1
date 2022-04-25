@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LP5 - Fibonacci Total</title>
+</head>
+
+<body>
+    <script>
+        let number1 = 1, number2 = 0, total = 0;
+
+        for (let i = 2; i <= 20; i++) {
+            let count = number1 + number2;
+            number1 = number2;
+            number2 = count;
+            total += count;
+        }
+
+        alert(`Tổng của 20 số đầu tiên trong dãy Fibonacci là: ${total}`);
+    </script>
+</body>
+
+</html>
