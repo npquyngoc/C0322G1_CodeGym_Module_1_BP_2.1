@@ -40,11 +40,11 @@
 
         function play() {
 
-            let max = parseFloat(prompt(`■ Số ngẫu nhiên tối thiểu được mặc định là 1\n■ Bạn hãy nhập vào số ngẫu nhiên tối đa lớn hơn 1:\n`)), random = Math.floor(Math.random() * max + 1), count = 0;
+            let getMax = parseFloat(prompt(`■ Số ngẫu nhiên tối thiểu được mặc định là 1\n■ Bạn hãy nhập vào số ngẫu nhiên tối đa lớn hơn 1:\n`)), random = Math.floor(Math.random() * getMax + 1), count = 0;
 
             while (count < 3) {
 
-                let guess = parseFloat(prompt(`■ Số ngẫu nhiên trong khoảng từ 1 đến ${max}\n■ Bạn hãy nhập vào để đoán số ngẫu nhiên:\n`));
+                let guess = parseFloat(prompt(`■ Số ngẫu nhiên trong khoảng từ 1 đến ${getMax}\n■ Bạn hãy nhập vào để đoán số ngẫu nhiên:\n`));
 
                 if (random == guess) {
 
