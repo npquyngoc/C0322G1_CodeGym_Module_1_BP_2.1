@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LP 1.5 - Fibonacci Sequence Total</title>
+
+    <style>
+        hr {
+            width: 270px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+
+    <h4>LP 1.5 - Fibonacci Sequence Total</h4>
+
+    <p>■ Tổng của 20 dãy số Fibonacci đầu tiên.</p>
+
+    <hr>
+
+    <script>
+        let number1 = 1, number2 = 0, total = 0, count, temp;
+
+        for (count = 2; count <= 20; count++) {
+
+            temp = number1 + number2;
+
+            number1 = number2;
+            number2 = temp;
+
+            total += temp;
+
+        }
+
+        alert(`■ Tổng của 20 dãy số Fibonacci đầu tiên bằng: ${total}`);
+    </script>
+</body>
+
+</html>

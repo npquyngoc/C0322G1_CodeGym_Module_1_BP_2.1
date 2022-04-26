@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LP 2.1 - Fibonacci Sequence Input</title>
+
+    <style>
+        hr {
+            width: 560px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+
+    <h4>LP 2.1 - Fibonacci Sequence Input</h4>
+
+    <p>■ Hiển thị ra dãy số Fibonacci đầu tiên do người dùng nhập vào trong khoảng nào đó.</p>
+
+    <hr>
+
+    <script>
+        let getNumber = parseFloat(prompt("■ Bạn hãy nhập vào số dãy Fibonacci đầu tiên muốn được in ra:")), number1 = 1, number2 = 0, count, temp;
+
+        for (count = 1; count <= getNumber; count++) {
+
+            temp = number1 + number2;
+
+            number1 = number2;
+            number2 = temp;
+
+            document.write(`${number1}<br>`);
+
+        }
+    </script>
+</body>
+
+</html>

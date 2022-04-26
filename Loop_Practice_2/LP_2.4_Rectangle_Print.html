@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LP 2.4 - Rectangle Print</title>
+
+    <style>
+        hr {
+            width: 200px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+
+    <h4>LP 2.4 - Rectangle Print</h4>
+
+    <p>■ Hiển thị ra 1 hình chữ nhật.</p>
+
+    <hr>
+
+    <h2></h2>
+
+    <script>
+        let getBlank = document.querySelector("h2"), width = 20, height = 5, count1, count2, rectangle = "";
+
+        for (count1 = 0; count1 <= height; count1++) {
+
+            for (count2 = 0; count2 <= width; count2++) {
+
+                if (count1 == 0 || count1 == height) {
+
+                    rectangle += "*";
+
+                }
+
+                else {
+
+                    if (count2 == 0 || count2 == width) {
+
+                        rectangle += "*";
+
+                    }
+
+                    else {
+
+                        rectangle += "&nbsp&nbsp";
+
+                    }
+
+                }
+
+            }
+
+            rectangle += "<br>";
+            getBlank.innerHTML = rectangle;
+
+        }
+    </script>
+</body>
+
+</html>

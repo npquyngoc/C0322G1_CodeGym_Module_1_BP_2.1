@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LP 2.2 - Integer Factorial Calculate</title>
+
+    <style>
+        hr {
+            width: 290px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+
+    <h4>LP 2.2 - Integer Factorial Calculate</h4>
+
+    <p>■ Tính giai thừa của một số nguyên dương.</p>
+
+    <hr>
+
+    <script>
+        let getNumber = parseFloat(prompt("■ Bạn hãy nhập vào số muốn tính giai thừa:")), result = 1, count;
+
+        for (count = 1; count <= getNumber; count++) {
+
+            result *= count;
+
+        }
+
+        alert(`■ Giai thừa của số ${getNumber}! bằng: ${result}`);
+    </script>
+</body>
+
+</html>

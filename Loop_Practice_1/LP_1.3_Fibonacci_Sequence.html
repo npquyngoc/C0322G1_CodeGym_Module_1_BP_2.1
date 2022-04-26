@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LP 1.3 - Fibonacci Sequence</title>
+
+    <style>
+        hr {
+            width: 280px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+
+    <h4>LP 1.3 - Fibonacci Sequence</h4>
+
+    <p>■ Hiển thị ra 20 dãy số Fibonacci đầu tiên.</p>
+
+    <hr>
+
+    <script>
+        let number1 = 1, number2 = 0, count, temp;
+
+        for (count = 1; count <= 20; count++) {
+
+            temp = number1 + number2;
+
+            number1 = number2;
+            number2 = temp;
+
+            document.write(`${number1}<br>`);
+
+        }
+    </script>
+</body>
+
+</html>

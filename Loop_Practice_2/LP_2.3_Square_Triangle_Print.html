@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LP 2.3 - Square Triangle Print</title>
+
+    <style>
+        hr {
+            width: 390px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+
+    <h4>LP 2.3 - Square Triangle Print</h4>
+
+    <p>■ Hiển thị ra 4 tam giác vuông và đặt ở các vị trí khác nhau.</p>
+
+    <hr>
+
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+    <h2></h2>
+
+    <script>
+        let getBlank = document.getElementsByTagName("h2"), temp = 1, length1 = 5, length2 = 5, count1, count2, squareTriangle1 = "", squareTriangle2 = "", squareTriangle3 = "", squareTriangle4 = "";
+
+            while (temp <= length1) {
+
+                for (count1 = 1; count1 <= temp; count1++) {
+
+                    squareTriangle1 += "*";
+
+                }
+
+                squareTriangle1 += "<br>";
+                temp++;
+                getBlank[0].innerHTML = squareTriangle1;
+
+            }
+
+            while (length1 > 0) {
+
+                for (count1 = 1; count1 <= length1; count1++) {
+
+                    squareTriangle2 += "*";
+
+                }
+
+                squareTriangle2 += "<br>";
+                length1--;
+                getBlank[1].innerHTML = squareTriangle2;
+
+            }
+
+            for (count1 = 1; count1 <= length2; count1++) {
+
+                for (count2 = 1; count2 <= (length2 - count1); count2++) {
+
+                    squareTriangle3 += "&nbsp&nbsp";
+
+                }
+
+                for (count2 = 1; count2 <= count1; count2++) {
+
+                    squareTriangle3 += "*";
+
+                }
+
+                squareTriangle3 += "<br>";
+                getBlank[2].innerHTML = squareTriangle3;
+
+            }
+            
+            for (count1 = 0; count1 <= length2; count1++) {
+
+                for (count2 = 1; count2 <= count1; count2++) {
+
+                    squareTriangle4 += "&nbsp&nbsp";
+
+                }
+
+                for (count2 = 5; count2 > count1; count2--) {
+
+                    squareTriangle4 += "*";
+
+                }
+
+                squareTriangle4 += "<br>";
+                getBlank[3].innerHTML = squareTriangle4;
+
+            }
+    </script>
+</body>
+
+</html>
