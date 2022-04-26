@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LP8 - Number Guess Game</title>
+
+    <style>
+        hr {
+            width: 680px;
+            margin-left: 0;
+        }
+
+        #Button_Retry {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+
+    <h4>LP8 - Number Guess Game</h4>
+
+    <p>Thiết kế giao diện chỉ gồm 1 nút "CHƠI NGAY" cho phép người dùng bắt đầu chơi hoặc chơi lại.<br><br>
+    Ứng dụng hiển thị cửa sổ Prompt cho phép người dùng nhập vào muốn đoán trong khoảng nào.<br>
+    Ứng dụng chọn ra số ngẫu nhiên trong khoảng mà người dùng chọn.<br>
+    Ứng dụng hiển thị cửa số Prompt cho người dùng nhập giá trị mà người dùng đoán.<br><br>
+    Nếu bằng thì hiển thị thông báo chúc mừng và kết thúc lượt chơi.<br>
+    Nếu lớn hơn hoặc bé hơn thì hiển thị thông báo lớn hơn hay bé hơn và cho phép người dùng lựa chọn lại.</p>
+
+    <hr>
+
+    <input id="Button_Play" type="button" value="CHƠI NGAY" onclick="play()">
+    <input id="Button_Retry" type="button" value="THỬ LẠI" onclick="retry()">
+
+    <script>
+        let buttonPlay = document.querySelector("#Button_Play"), buttonRetry = document.querySelector("#Button_Retry");
+
+        function play() {
+
+            let max = parseInt(prompt(`Số tối thiểu mặc định là 1\nBạn hãy nhập vào số tối đa lớn hơn 1.\n`));
+            let random = Math.floor(Math.random() * max + 1);
+            let count = 0;
+
+            while (count < 3) {
+
+                let guess = parseInt(prompt(`Số ngẫu nhiên trong khoảng 1-${max}\nBạn hãy đoán bằng cách nhập vào số ngẫu nhiên.\n`));
+
+                if (random == guess) {
+
+                    buttonPlay.style.visibility = "hidden";
+                    buttonRetry.style.visibility = "visible";
+
+                    alert(`Bạn đã đoán đúng với số là ${random}!`);
+                    break;
+
+                }
+
+                else {
+
+                    if (guess < random) {
+
+                        alert(`Bạn chưa đoán đúng. Số vừa nhập nhỏ hơn số ngẫu nhiên, hãy thử lại!`);
+
+                    }
+
+                    else {
+
+                        alert(`Bạn chưa đoán đúng. Số vừa nhập lớn hơn số ngẫu nhiên, hãy thử lại!`);
+
+                    }
+
+                    count += 1;
+
+                }
+
+            }
+
+        }
+
+        function retry() {
+
+            buttonPlay.style.visibility = "visible";
+            buttonRetry.style.visibility = "hidden";
+
+        }
+    </script>
+</body>
+
+</html>

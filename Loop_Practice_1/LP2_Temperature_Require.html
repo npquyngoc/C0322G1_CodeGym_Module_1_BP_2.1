@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LP2 - Temperature Require</title>
+
+    <style>
+        hr {
+            width: 480px;
+            margin-left: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+
+    <h4>LP2 - Temperature Require</h4>
+
+    <p>Dùng hàm prompt() để lấy thông tin nhiệt độ mà người dùng nhập vào.<br>
+    Nhiệt độ dưới 20 thì yêu cầu tăng lên và trên 100 thì yêu cầu giảm xuống.</p>
+
+    <hr>
+
+    <script>
+        let getTemperature = parseFloat(prompt(`Bạn hãy nhập vào số nhiệt độ:`));
+
+        while (true) {
+
+            if (getTemperature < 20) {
+
+                alert(`Nhiệt độ bạn nhập vào quá thấp, hãy tăng lên!`);
+                getTemperature = parseFloat(prompt(`Bạn hãy nhập vào số nhiệt độ:`));
+
+            }
+
+            if (getTemperature > 100) {
+
+                alert(`Nhiệt độ bạn nhập vào quá cao, hãy giảm xuống!`);
+                getTemperature = parseFloat(prompt(`Bạn hãy nhập vào số nhiệt độ:`));
+
+            }
+
+            if (getTemperature >= 20 && getTemperature <= 100) {
+
+                alert(`Nhiệt độ vừa phải.`);
+                break;
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>
