@@ -13,7 +13,7 @@
             margin-left: 0;
         }
 
-        .Button_Retry {
+        input[value="THỬ LẠI"] {
             visibility: hidden;
         }
     </style>
@@ -32,11 +32,11 @@
 
     <hr>
 
-    <input class="Button_Play" type="button" value="CHƠI NGAY" onclick="play()">
-    <input class="Button_Retry" type="button" value="THỬ LẠI" onclick="retry()">
+    <input type="button" value="CHƠI NGAY" onclick="play()">
+    <input type="button" value="THỬ LẠI" onclick="retry()">
 
     <script>
-        let buttonPlay = document.querySelector(".Button_Play"), buttonRetry = document.querySelector(".Button_Retry");
+        let getButton = document.getElementsByTagName("input");
 
         function play() {
 
@@ -48,8 +48,8 @@
 
                 if (random == guess) {
 
-                    buttonPlay.style.visibility = "hidden";
-                    buttonRetry.style.visibility = "visible";
+                    getButton[0].style.visibility = "hidden";
+                    getButton[1].style.visibility = "visible";
 
                     alert(`■ Chúc mừng bạn đã đoán đúng với số ngẫu nhiên là ${random}!`);
                     break;
@@ -80,8 +80,8 @@
 
         function retry() {
 
-            buttonPlay.style.visibility = "visible";
-            buttonRetry.style.visibility = "hidden";
+            getButton[0].style.visibility = "visible";
+            getButton[1].style.visibility = "hidden";
 
         }
     </script>
